@@ -1,1 +1,2 @@
 export 'package:frontend_improove/infrastructure/navigation/bindings/controllers/home.controller.binding.dart'; 
+export 'package:frontend_improove/infrastructure/navigation/bindings/controllers/landingpage.controller.binding.dart'; 
