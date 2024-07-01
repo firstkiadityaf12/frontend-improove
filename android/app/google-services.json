@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "948491121904",
+    "project_id": "improove-a5eaa",
+    "storage_bucket": "improove-a5eaa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948491121904:android:c6199e07fa7ab66488be35",
+        "android_client_info": {
+          "package_name": "improove.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARRqtxjfHlQDsZFD5tznOLYACvb7a3myg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

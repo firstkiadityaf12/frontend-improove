@@ -1,0 +1,1 @@
+export 'package:frontend_improove/infrastructure/navigation/bindings/controllers/home.controller.binding.dart'; 
