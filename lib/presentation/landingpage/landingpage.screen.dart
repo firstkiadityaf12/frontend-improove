@@ -12,7 +12,7 @@ class LandingpageScreen extends GetView<LandingpageController> {
   const LandingpageScreen({super.key});
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
+    return SingleChildScrollView(
       child: Column(
         children: [
           HomeSection(),

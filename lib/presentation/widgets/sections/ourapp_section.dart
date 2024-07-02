@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../infrastructure/theme/colour.dart';
 
 class OurAppSection extends StatelessWidget {
-  const OurAppSection({
+  final url = Uri.parse("https://github.com/ardhiancalwa/frontend-improove");
+
+  OurAppSection({
     super.key,
   });
 
@@ -121,9 +124,10 @@ class OurAppSection extends StatelessWidget {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         backgroundColor: primaryColor,
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 18.45)),
-                    onPressed: () {},
+                        padding: EdgeInsets.symmetric(horizontal: 18.45)),
+                    onPressed: () {
+                      _launchURL(url);
+                    },
                     child: Row(
                       children: [
                         Container(
@@ -135,8 +139,7 @@ class OurAppSection extends StatelessWidget {
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(9.0),
-                            child:
-                                SvgPicture.asset('/icons/download.svg'),
+                            child: SvgPicture.asset('/icons/download.svg'),
                           ),
                         ),
                         SizedBox(
@@ -161,5 +164,15 @@ class OurAppSection extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void _launchURL(Uri url) async {
+    print('Trying to launch $url'); // Add logging
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url, mode: LaunchMode.externalApplication);
+    } else {
+      print('Could not launch $url'); // Add error logging
+      throw 'Could not launch $url';
+    }
   }
 }
