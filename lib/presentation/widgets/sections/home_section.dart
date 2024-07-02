@@ -19,7 +19,7 @@ class HomeSection extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            left: -110,
+            left: -150,
             child: Image.asset('/backgrounds/catur2.png'),
           ),
           Positioned(
